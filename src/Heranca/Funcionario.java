@@ -8,7 +8,7 @@ public class Funcionario {
     public Funcionario(){
 
     }
-    public Funcionario(double salario, String nome) {
+    public Funcionario(String nome, double salario) {
         this.nome = nome;
         setSalario(salario);
     }
@@ -32,12 +32,16 @@ public class Funcionario {
         this.nome = nome;
     }
 
+    //Metodo de impressao
+    public String toString(){
+        return "Nome: " +this.nome + "\nSalario: R$ " + this.salario;
+    }
+
     //Outros metodos
     public double calcularBonus(){
         double bonus = 0;
         return salario*bonus;
     }
-
     public String trabalhar(){
         return "Funcionário está trabalhando";
     }
